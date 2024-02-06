@@ -8,8 +8,7 @@ This resource was created as a free script for backpacks using ox_inventory
 - Compatibility for ESX
 
 ## Known bugs
-- Player can have multiple bag types example: 1x bag1 and 1x bag2
-- Some problems with illenium-appearance when entering and exiting vehicles
+- Only ESX compatible
 
 ## Installation
 
@@ -55,7 +54,6 @@ Configure the bags in `unr3al_backpack/config.lua`
     ['bag1'] = {
         Slots = 35,
         Weight = 20000,
-        Label = 'Backpack',
         Uniform = {
             Male = {
                 ['bags_1'] = 41,
@@ -66,11 +64,20 @@ Configure the bags in `unr3al_backpack/config.lua`
                 ['bags_2'] = 0,
             }
         },
+        CleanUniform = {
+            Male = {
+                ['bags_1'] = 0,
+                ['bags_2'] = 0,
+            },
+            Female = {
+                ['bags_1'] = 0,
+                ['bags_2'] = 0,
+            }
+        }
     },
     ['bag2'] = {
         Slots = 15,
         Weight = 5000,
-        Label = 'Backpack',
         Uniform = {
             Male = {
                 ['bags_1'] = 41,
@@ -81,6 +88,16 @@ Configure the bags in `unr3al_backpack/config.lua`
                 ['bags_2'] = 0,
             }
         },
+        CleanUniform = {
+            Male = {
+                ['bags_1'] = 0,
+                ['bags_2'] = 0,
+            },
+            Female = {
+                ['bags_1'] = 0,
+                ['bags_2'] = 0,
+            }
+        }
     },
 ```
 
