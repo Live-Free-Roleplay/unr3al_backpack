@@ -70,10 +70,12 @@ CreateThread(function()
 		end
 
 		if Config.OneBagInInventory then
-			if (move_type == "player" and count_bagpacks > 0 and toinv ~= fromInv) and string.find(payload.fromSlot.name, 'bag') then
-				TriggerClientEvent('ox_lib:notify', payload.source,
+			if (move_type == "player" and count_bagpacks > 0 and string.find(payload.fromSlot.name, 'bag')) then
+				if fromInv ~= toInv then
+					TriggerClientEvent('ox_lib:notify', payload.source,
 					{ type = 'error', title = Strings.action_incomplete, description = Strings.one_backpack_only })
-				return false
+					return false
+				end
 			end
 		end
 		return true
