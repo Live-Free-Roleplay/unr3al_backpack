@@ -7,9 +7,6 @@ This resource was created as a free script for backpacks using ox_inventory
 - Customizable item name and storage parameters
 - Compatibility for ESX
 
-## Known bugs
-- Only ESX compatible
-
 ## Installation
 
 - Download this script
