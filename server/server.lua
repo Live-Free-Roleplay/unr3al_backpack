@@ -51,8 +51,7 @@ CreateThread(function()
 	local swaphook = ox_inventory:registerHook('swapItems', function(payload)
 		local count_bagpacks = 0
 		local fromInv, toInv, move_type = payload.fromInventory, payload.toInventory, payload.toType
-
-		print(payload.fromSlot.name)
+		
 		for vbag in pairs(Config.Backpacks) do
 			count_bagpacks = count_bagpacks + ox_inventory:GetItemCount(payload.source, vbag, nil, false)
 		end
