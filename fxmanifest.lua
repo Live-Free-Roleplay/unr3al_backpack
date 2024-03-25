@@ -2,8 +2,8 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-description 'Wasabi Backpack for Ox Inventory'
-version '1.1.0'
+description 'Unr3al Backpack for Ox Inventory'
+version '1.1.1'
 
 client_scripts {
     'client/**.lua'
