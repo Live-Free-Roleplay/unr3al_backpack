@@ -5,6 +5,8 @@ local ped = cache.ped
 local count = 0
 local timeout, changed, puttedon = false, false, false
 local PlayerState = LocalPlayer.state
+PlayerState:set('Bag', nil)
+PlayerState:set('bagEquipped', false)
 
 local function PutOnBag(bagtype)
     bagtype = bagtype
@@ -115,16 +117,6 @@ function CountBackpacksInInventory()
     end
     return count
 end
-
-lib.onCache('vehicle', function(value)
-    if GetResourceState('ox_inventory') ~= 'started' then return end
-    local count = CountBackpacksInInventory()
-    if value then
-        RemoveBag()
-    elseif count >= 1 then
-        PutOnBag(PlayerState.Bag)
-    end
-end)
 
 for kbag in pairs(Config.Backpacks) do
     local bagtype = kbag
