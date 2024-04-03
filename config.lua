@@ -16,39 +16,15 @@ Config.Filter = { -- Items not allowed in your bags
 
 Config.Backpacks = {
     ['bag1'] = {
-        Slots = 35,
-        Weight = 20000,
+        Slots = 50,
+        Weight = 50000,
         Uniform = {
             Male = {
-                ['bags_1'] = 41,
+                ['bags_1'] = 47,
                 ['bags_2'] = 0,
             },
             Female = {
-                ['bags_1'] = 41,
-                ['bags_2'] = 0,
-            }
-        },
-        CleanUniform = {
-            Male = {
-                ['bags_1'] = 0,
-                ['bags_2'] = 0,
-            },
-            Female = {
-                ['bags_1'] = 0,
-                ['bags_2'] = 0,
-            }
-        }
-    },
-    ['bag2'] = {
-        Slots = 15,
-        Weight = 5000,
-        Uniform = {
-            Male = {
-                ['bags_1'] = 41,
-                ['bags_2'] = 0,
-            },
-            Female = {
-                ['bags_1'] = 41,
+                ['bags_1'] = 47,
                 ['bags_2'] = 0,
             }
         },
@@ -66,8 +42,8 @@ Config.Backpacks = {
 }
 
 Strings = { -- Notification strings
-    action_incomplete = 'Action Incomplete',
-    one_backpack_only = 'You can only have 1x backpack!',
-    backpack_in_backpack = 'You can\'t place a backpack within another!',
+    action_incomplete = 'Action Impossible',
+    one_backpack_only = 'You can only have 1 backpack!',
+    backpack_in_backpack = 'You can\'t place a backpack inside another!',
 
 }
