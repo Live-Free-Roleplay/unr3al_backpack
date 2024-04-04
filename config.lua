@@ -1,30 +1,29 @@
 Config = {}
 
 Config.checkForUpdates = true -- Check for updates?
-Config.Debug = true
+Config.Debug = false
 Config.Framework = 'ESX'
 
 Config.OneBagInInventory = true
 
 Config.Filter = { -- Items not allowed in your bags
     itemFilter = {
-        bag1 = true,
-        bag2 = true
+        bag = true
     }
 }
 
 
 Config.Backpacks = {
-    ['bag1'] = {
+    ['bag'] = {
         Slots = 50,
         Weight = 50000,
         Uniform = {
             Male = {
-                ['bags_1'] = 47,
+                ['bags_1'] = 45,
                 ['bags_2'] = 0,
             },
             Female = {
-                ['bags_1'] = 47,
+                ['bags_1'] = 45,
                 ['bags_2'] = 0,
             }
         },

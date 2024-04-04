@@ -74,34 +74,33 @@ end
 
 function boolChange()
     local count = 0
+    local bag = nil
 
     for vbag in pairs(Config.Backpacks) do
         count = count + ox_inventory:Search('count', vbag)
+        bag = vbag
     end
 
     if count > 0 then
         if count >= 1 then
-            PutOnBag(vbag)
+            PutOnBag(bag)
             if Config.Debug then
                 print("Count: " .. count)
             end
         end
     elseif count == 0 and PlayerState.bagEquipped then
-        RemoveBag(vbag)
+        RemoveBag(bag)
     end
 end
 
 AddEventHandler('ox_inventory:updateInventory', function(changed)
-    print(tostring(changed))
     for k, v in pairs(changed) do
         if type(v) == 'table' and not timeout then
             timeout = true
-            print("Tablechange")
             tableChange(v)
             timeout = false
         elseif type(v) == 'boolean' and not timeout then
             boolChange()
-            print("boolChange")
         end
     end
 end)
