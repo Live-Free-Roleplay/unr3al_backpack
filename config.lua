@@ -15,8 +15,8 @@ Config.Filter = { -- Items not allowed in your bags
 
 Config.Backpacks = {
     ['bag'] = {
-        Slots = 50,
-        Weight = 50000,
+        Slots = 30,
+        Weight = 75000,
         Uniform = {
             Male = {
                 ['bags_1'] = 45,
