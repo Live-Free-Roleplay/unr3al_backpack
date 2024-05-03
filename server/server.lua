@@ -63,14 +63,14 @@ CreateThread(function()
 			print("Movetype: " .. move_type)
 		end
 
-		if string.find(toInv, 'bag') and string.find(payload.fromSlot.name, 'bag') then
+		if string.sub(toInv, 1, 3) == "bag" and string.sub(payload.fromSlot.name, 1, 3) == "bag" then
 			TriggerClientEvent('ox_lib:notify', payload.source,
 				{ type = 'error', title = Strings.action_incomplete, description = Strings.backpack_in_backpack })
 			return false
 		end
 
 		if Config.OneBagInInventory then
-			if (move_type == "player" and count_bagpacks > 0 and string.find(payload.fromSlot.name, 'bag')) then
+			if (move_type == "player" and count_bagpacks > 0 and string.sub(payload.fromSlot.name, 1, 3) == "bag") then
 				if fromInv ~= toInv then
 					TriggerClientEvent('ox_lib:notify', payload.source,
 					{ type = 'error', title = Strings.action_incomplete, description = Strings.one_backpack_only })

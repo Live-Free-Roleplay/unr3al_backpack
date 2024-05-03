@@ -1,7 +1,7 @@
 Config = {}
 
 Config.checkForUpdates = true -- Check for updates?
-Config.Debug = false
+Config.Debug = true
 Config.Framework = 'ESX'
 
 Config.OneBagInInventory = true
